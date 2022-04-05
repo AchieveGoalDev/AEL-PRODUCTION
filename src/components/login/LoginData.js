@@ -65,91 +65,92 @@ const LoginData = ({ auth }) => {
 
   const authenticate = async (credentials) => {
 
-    let authenticated = true
-
-    const { username, password, accountNo, schoolNo } = credentials
-    const schoolList = await API.graphql(graphqlOperation(listSchools))
-    const userList = await API.graphql(graphqlOperation(listUsers))
-    const accountList = await API.graphql(graphqlOperation(listAccounts))
-
-    console.log(schoolList)
-    console.log(userList)
-    console.log(accountList)
     console.log(credentials)
+    // let authenticated = true
 
-    const fetchedSchool = _.find(schoolList.data.listSchools.items, (school) => {
-      return school.number === schoolNo
-    })
+    // const { username, password, accountNo, schoolNo } = credentials
+    // const schoolList = await API.graphql(graphqlOperation(listSchools))
+    // const userList = await API.graphql(graphqlOperation(listUsers))
+    // const accountList = await API.graphql(graphqlOperation(listAccounts))
 
-    const fetchedAccount = _.find(accountList.data.listAccounts.items, (account) => {
-      return account.number === accountNo
-    })
+    // console.log(schoolList)
+    // console.log(userList)
+    // console.log(accountList)
+    // console.log(credentials)
 
-    const fetchedUser = _.find(userList.data.listUsers.items, (user) => {
-      return user.username === username
-    })
+    // const fetchedSchool = _.find(schoolList.data.listSchools.items, (school) => {
+    //   return school.number === schoolNo
+    // })
+
+    // const fetchedAccount = _.find(accountList.data.listAccounts.items, (account) => {
+    //   return account.number === accountNo
+    // })
+
+    // const fetchedUser = _.find(userList.data.listUsers.items, (user) => {
+    //   return user.username === username
+    // })
 
 
-    const isSchool = Boolean(fetchedSchool)
+    // const isSchool = Boolean(fetchedSchool)
 
-    const isAccount = Boolean(fetchedAccount)
+    // const isAccount = Boolean(fetchedAccount)
 
-    const isUser = Boolean(fetchedUser)
-
-
+    // const isUser = Boolean(fetchedUser)
 
 
-    if (isSchool && isUser && isAccount) {
-      if (username !== fetchedUser.username || password !== fetchedUser.password) {
-        authenticated = false
-        console.log('Username or password is incorrect')
-      }
 
-      if (schoolNo !== fetchedSchool.number || accountNo !== fetchedAccount.number) {
-        authenticated = false
-        console.log('School number or account number is incorrect')
-      }
 
-      if (authenticated) {
+    // if (isSchool && isUser && isAccount) {
+    //   if (username !== fetchedUser.username || password !== fetchedUser.password) {
+    //     authenticated = false
+    //     console.log('Username or password is incorrect')
+    //   }
 
-        const user = {
-          username: fetchedUser.username,
-          id: schoolNo + '-' + accountNo + '-' + fetchedUser.number,
-          perm: fetchedAccount.permissions,
+    //   if (schoolNo !== fetchedSchool.number || accountNo !== fetchedAccount.number) {
+    //     authenticated = false
+    //     console.log('School number or account number is incorrect')
+    //   }
 
-        }
+    //   if (authenticated) {
 
-        const token = signToken(user);
+    //     const user = {
+    //       username: fetchedUser.username,
+    //       id: schoolNo + '-' + accountNo + '-' + fetchedUser.number,
+    //       perm: fetchedAccount.permissions,
 
-        cookie.set('AELJWT', token, { expires: 3 / 24 })
-        successToast({
-          title: "ログインしました！",
-          description: "",
-          status: "success",
-          duration: 3000,
-          isClosable: true,
-        });
-        setAuthComplete(true)
-      } else {
-        failToast({
-          title: "ログイン出来ませんでした",
-          description: 'ユーザー名、パスワード、または講座番号正しくないです',
-          status: "error",
-          duration: 3000,
-          isClosable: true,
-        });
+    //     }
 
-      }
+    //     const token = signToken(user);
 
-    } else {
-      failToast({
-        title: "ログイン出来ませんでした",
-        description: 'エラーが発生しました。再入力をお願いします',
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-    }
+    //     cookie.set('AELJWT', token, { expires: 3 / 24 })
+    //     successToast({
+    //       title: "ログインしました！",
+    //       description: "",
+    //       status: "success",
+    //       duration: 3000,
+    //       isClosable: true,
+    //     });
+    //     setAuthComplete(true)
+    //   } else {
+    //     failToast({
+    //       title: "ログイン出来ませんでした",
+    //       description: 'ユーザー名、パスワード、または講座番号正しくないです',
+    //       status: "error",
+    //       duration: 3000,
+    //       isClosable: true,
+    //     });
+
+    //   }
+
+    // } else {
+    //   failToast({
+    //     title: "ログイン出来ませんでした",
+    //     description: 'エラーが発生しました。再入力をお願いします',
+    //     status: "error",
+    //     duration: 3000,
+    //     isClosable: true,
+    //   });
+    // }
   }
 
   const router = useRouter();
