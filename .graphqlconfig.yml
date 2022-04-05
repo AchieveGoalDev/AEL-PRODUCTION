@@ -1,6 +1,6 @@
 projects:
-  aelproduction:
-    schemaPath: amplify/backend/api/aelproduction/build/schema.graphql
+  Codegen Project:
+    schemaPath: schema.graphql
     includes:
       - src/graphql/**/*.js
     excludes:
@@ -10,6 +10,8 @@ projects:
         codeGenTarget: javascript
         generatedFileName: ''
         docsFilePath: src/graphql
-        region: ap-northeast-1
+        region: us-east-1
         apiId: null
+        frontend: javascript
+        framework: react
         maxDepth: 5

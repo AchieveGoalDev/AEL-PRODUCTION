@@ -1,0 +1,811 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Account {
+  createdAt: AWSDateTime!
+  id: ID!
+  number: Int!
+  permissions: [String!]
+  schoolAccountsId: ID
+  updatedAt: AWSDateTime!
+  usercount: Int!
+  users(filter: ModelUserFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelUserConnection
+}
+
+type Course {
+  abbr: String!
+  courseDescriptionsId: ID
+  courseVisualsId: ID
+  courseid: ID!
+  createdAt: AWSDateTime!
+  descriptions: CourseDescriptions
+  id: ID!
+  level: String!
+  test: Test
+  testCoursesId: ID!
+  updatedAt: AWSDateTime!
+  videocount: Int
+  videos(day: ModelIntKeyConditionInput, filter: ModelVideoFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelVideoConnection
+  visuals: CourseVisuals
+}
+
+type CourseDescriptions {
+  course: Course!
+  createdAt: AWSDateTime!
+  id: ID!
+  longdesc: [String!]!
+  sections(filter: ModelCourseDescriptionsSectionFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelCourseDescriptionsSectionConnection
+  shortdesc: String!
+  subtitle: String!
+  title: String!
+  updatedAt: AWSDateTime!
+}
+
+type CourseDescriptionsInfoBox {
+  createdAt: AWSDateTime!
+  id: ID!
+  items(filter: ModelInfoBoxItemFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelInfoBoxItemConnection
+  name: String!
+  updatedAt: AWSDateTime!
+}
+
+type CourseDescriptionsSection {
+  courseDescriptionsSectionsId: ID!
+  createdAt: AWSDateTime!
+  desc: String
+  descripition: CourseDescriptions!
+  id: ID!
+  name: String!
+  number: Int!
+  updatedAt: AWSDateTime!
+}
+
+type CourseVisuals {
+  course: Course!
+  createdAt: AWSDateTime!
+  id: ID!
+  themename: String
+  tnurl: String
+  updatedAt: AWSDateTime!
+}
+
+type InfoBoxItem {
+  courseDescriptionsInfoBoxItemsId: ID!
+  createdAt: AWSDateTime!
+  icon: String!
+  id: ID!
+  text: String!
+  updatedAt: AWSDateTime!
+}
+
+type ModelAccountConnection {
+  items: [Account]!
+  nextToken: String
+}
+
+type ModelCourseConnection {
+  items: [Course]!
+  nextToken: String
+}
+
+type ModelCourseDescriptionsConnection {
+  items: [CourseDescriptions]!
+  nextToken: String
+}
+
+type ModelCourseDescriptionsInfoBoxConnection {
+  items: [CourseDescriptionsInfoBox]!
+  nextToken: String
+}
+
+type ModelCourseDescriptionsSectionConnection {
+  items: [CourseDescriptionsSection]!
+  nextToken: String
+}
+
+type ModelCourseVisualsConnection {
+  items: [CourseVisuals]!
+  nextToken: String
+}
+
+type ModelInfoBoxItemConnection {
+  items: [InfoBoxItem]!
+  nextToken: String
+}
+
+type ModelSchoolConnection {
+  items: [School]!
+  nextToken: String
+}
+
+type ModelTestConnection {
+  items: [Test]!
+  nextToken: String
+}
+
+type ModelUserConnection {
+  items: [User]!
+  nextToken: String
+}
+
+type ModelVideoConnection {
+  items: [Video]!
+  nextToken: String
+}
+
+type Mutation {
+  createAccount(condition: ModelAccountConditionInput, input: CreateAccountInput!): Account
+  createCourse(condition: ModelCourseConditionInput, input: CreateCourseInput!): Course
+  createCourseDescriptions(condition: ModelCourseDescriptionsConditionInput, input: CreateCourseDescriptionsInput!): CourseDescriptions
+  createCourseDescriptionsInfoBox(condition: ModelCourseDescriptionsInfoBoxConditionInput, input: CreateCourseDescriptionsInfoBoxInput!): CourseDescriptionsInfoBox
+  createCourseDescriptionsSection(condition: ModelCourseDescriptionsSectionConditionInput, input: CreateCourseDescriptionsSectionInput!): CourseDescriptionsSection
+  createCourseVisuals(condition: ModelCourseVisualsConditionInput, input: CreateCourseVisualsInput!): CourseVisuals
+  createInfoBoxItem(condition: ModelInfoBoxItemConditionInput, input: CreateInfoBoxItemInput!): InfoBoxItem
+  createSchool(condition: ModelSchoolConditionInput, input: CreateSchoolInput!): School
+  createTest(condition: ModelTestConditionInput, input: CreateTestInput!): Test
+  createUser(condition: ModelUserConditionInput, input: CreateUserInput!): User
+  createVideo(condition: ModelVideoConditionInput, input: CreateVideoInput!): Video
+  deleteAccount(condition: ModelAccountConditionInput, input: DeleteAccountInput!): Account
+  deleteCourse(condition: ModelCourseConditionInput, input: DeleteCourseInput!): Course
+  deleteCourseDescriptions(condition: ModelCourseDescriptionsConditionInput, input: DeleteCourseDescriptionsInput!): CourseDescriptions
+  deleteCourseDescriptionsInfoBox(condition: ModelCourseDescriptionsInfoBoxConditionInput, input: DeleteCourseDescriptionsInfoBoxInput!): CourseDescriptionsInfoBox
+  deleteCourseDescriptionsSection(condition: ModelCourseDescriptionsSectionConditionInput, input: DeleteCourseDescriptionsSectionInput!): CourseDescriptionsSection
+  deleteCourseVisuals(condition: ModelCourseVisualsConditionInput, input: DeleteCourseVisualsInput!): CourseVisuals
+  deleteInfoBoxItem(condition: ModelInfoBoxItemConditionInput, input: DeleteInfoBoxItemInput!): InfoBoxItem
+  deleteSchool(condition: ModelSchoolConditionInput, input: DeleteSchoolInput!): School
+  deleteTest(condition: ModelTestConditionInput, input: DeleteTestInput!): Test
+  deleteUser(condition: ModelUserConditionInput, input: DeleteUserInput!): User
+  deleteVideo(condition: ModelVideoConditionInput, input: DeleteVideoInput!): Video
+  updateAccount(condition: ModelAccountConditionInput, input: UpdateAccountInput!): Account
+  updateCourse(condition: ModelCourseConditionInput, input: UpdateCourseInput!): Course
+  updateCourseDescriptions(condition: ModelCourseDescriptionsConditionInput, input: UpdateCourseDescriptionsInput!): CourseDescriptions
+  updateCourseDescriptionsInfoBox(condition: ModelCourseDescriptionsInfoBoxConditionInput, input: UpdateCourseDescriptionsInfoBoxInput!): CourseDescriptionsInfoBox
+  updateCourseDescriptionsSection(condition: ModelCourseDescriptionsSectionConditionInput, input: UpdateCourseDescriptionsSectionInput!): CourseDescriptionsSection
+  updateCourseVisuals(condition: ModelCourseVisualsConditionInput, input: UpdateCourseVisualsInput!): CourseVisuals
+  updateInfoBoxItem(condition: ModelInfoBoxItemConditionInput, input: UpdateInfoBoxItemInput!): InfoBoxItem
+  updateSchool(condition: ModelSchoolConditionInput, input: UpdateSchoolInput!): School
+  updateTest(condition: ModelTestConditionInput, input: UpdateTestInput!): Test
+  updateUser(condition: ModelUserConditionInput, input: UpdateUserInput!): User
+  updateVideo(condition: ModelVideoConditionInput, input: UpdateVideoInput!): Video
+}
+
+type Query {
+  getAccount(id: ID!): Account
+  getCourse(id: ID!): Course
+  getCourseDescriptions(id: ID!): CourseDescriptions
+  getCourseDescriptionsInfoBox(id: ID!): CourseDescriptionsInfoBox
+  getCourseDescriptionsSection(id: ID!): CourseDescriptionsSection
+  getCourseVisuals(id: ID!): CourseVisuals
+  getInfoBoxItem(id: ID!): InfoBoxItem
+  getSchool(id: ID!): School
+  getTest(id: ID!): Test
+  getUser(id: ID!): User
+  getVideo(id: ID!): Video
+  listAccounts(filter: ModelAccountFilterInput, limit: Int, nextToken: String): ModelAccountConnection
+  listCourseDescriptions(filter: ModelCourseDescriptionsFilterInput, limit: Int, nextToken: String): ModelCourseDescriptionsConnection
+  listCourseDescriptionsInfoBoxes(filter: ModelCourseDescriptionsInfoBoxFilterInput, limit: Int, nextToken: String): ModelCourseDescriptionsInfoBoxConnection
+  listCourseDescriptionsSections(filter: ModelCourseDescriptionsSectionFilterInput, limit: Int, nextToken: String): ModelCourseDescriptionsSectionConnection
+  listCourseVisuals(filter: ModelCourseVisualsFilterInput, limit: Int, nextToken: String): ModelCourseVisualsConnection
+  listCourses(filter: ModelCourseFilterInput, limit: Int, nextToken: String): ModelCourseConnection
+  listInfoBoxItems(filter: ModelInfoBoxItemFilterInput, limit: Int, nextToken: String): ModelInfoBoxItemConnection
+  listSchools(filter: ModelSchoolFilterInput, limit: Int, nextToken: String): ModelSchoolConnection
+  listTests(filter: ModelTestFilterInput, limit: Int, nextToken: String): ModelTestConnection
+  listUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String): ModelUserConnection
+  listVideos(filter: ModelVideoFilterInput, limit: Int, nextToken: String): ModelVideoConnection
+}
+
+type School {
+  accounts(filter: ModelAccountFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelAccountConnection
+  createdAt: AWSDateTime!
+  id: ID!
+  name: String!
+  number: Int!
+  updatedAt: AWSDateTime!
+}
+
+type Subscription {
+  onCreateAccount: Account @aws_subscribe(mutations : ["createAccount"])
+  onCreateCourse: Course @aws_subscribe(mutations : ["createCourse"])
+  onCreateCourseDescriptions: CourseDescriptions @aws_subscribe(mutations : ["createCourseDescriptions"])
+  onCreateCourseDescriptionsInfoBox: CourseDescriptionsInfoBox @aws_subscribe(mutations : ["createCourseDescriptionsInfoBox"])
+  onCreateCourseDescriptionsSection: CourseDescriptionsSection @aws_subscribe(mutations : ["createCourseDescriptionsSection"])
+  onCreateCourseVisuals: CourseVisuals @aws_subscribe(mutations : ["createCourseVisuals"])
+  onCreateInfoBoxItem: InfoBoxItem @aws_subscribe(mutations : ["createInfoBoxItem"])
+  onCreateSchool: School @aws_subscribe(mutations : ["createSchool"])
+  onCreateTest: Test @aws_subscribe(mutations : ["createTest"])
+  onCreateUser: User @aws_subscribe(mutations : ["createUser"])
+  onCreateVideo: Video @aws_subscribe(mutations : ["createVideo"])
+  onDeleteAccount: Account @aws_subscribe(mutations : ["deleteAccount"])
+  onDeleteCourse: Course @aws_subscribe(mutations : ["deleteCourse"])
+  onDeleteCourseDescriptions: CourseDescriptions @aws_subscribe(mutations : ["deleteCourseDescriptions"])
+  onDeleteCourseDescriptionsInfoBox: CourseDescriptionsInfoBox @aws_subscribe(mutations : ["deleteCourseDescriptionsInfoBox"])
+  onDeleteCourseDescriptionsSection: CourseDescriptionsSection @aws_subscribe(mutations : ["deleteCourseDescriptionsSection"])
+  onDeleteCourseVisuals: CourseVisuals @aws_subscribe(mutations : ["deleteCourseVisuals"])
+  onDeleteInfoBoxItem: InfoBoxItem @aws_subscribe(mutations : ["deleteInfoBoxItem"])
+  onDeleteSchool: School @aws_subscribe(mutations : ["deleteSchool"])
+  onDeleteTest: Test @aws_subscribe(mutations : ["deleteTest"])
+  onDeleteUser: User @aws_subscribe(mutations : ["deleteUser"])
+  onDeleteVideo: Video @aws_subscribe(mutations : ["deleteVideo"])
+  onUpdateAccount: Account @aws_subscribe(mutations : ["updateAccount"])
+  onUpdateCourse: Course @aws_subscribe(mutations : ["updateCourse"])
+  onUpdateCourseDescriptions: CourseDescriptions @aws_subscribe(mutations : ["updateCourseDescriptions"])
+  onUpdateCourseDescriptionsInfoBox: CourseDescriptionsInfoBox @aws_subscribe(mutations : ["updateCourseDescriptionsInfoBox"])
+  onUpdateCourseDescriptionsSection: CourseDescriptionsSection @aws_subscribe(mutations : ["updateCourseDescriptionsSection"])
+  onUpdateCourseVisuals: CourseVisuals @aws_subscribe(mutations : ["updateCourseVisuals"])
+  onUpdateInfoBoxItem: InfoBoxItem @aws_subscribe(mutations : ["updateInfoBoxItem"])
+  onUpdateSchool: School @aws_subscribe(mutations : ["updateSchool"])
+  onUpdateTest: Test @aws_subscribe(mutations : ["updateTest"])
+  onUpdateUser: User @aws_subscribe(mutations : ["updateUser"])
+  onUpdateVideo: Video @aws_subscribe(mutations : ["updateVideo"])
+}
+
+type Test {
+  abbr: String!
+  courses(filter: ModelCourseFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelCourseConnection
+  createdAt: AWSDateTime!
+  fullname: String!
+  id: ID!
+  longdesc: [String!]
+  shortdesc: String
+  shortname: String!
+  updatedAt: AWSDateTime!
+}
+
+type User {
+  accountUsersId: ID
+  createdAt: AWSDateTime!
+  id: ID!
+  number: Int!
+  password: String!
+  updatedAt: AWSDateTime!
+  username: String!
+}
+
+type Video {
+  course: Course!
+  courseID: ID!
+  createdAt: AWSDateTime!
+  day: Int
+  id: ID!
+  longdesc: [String!]
+  section: CourseDescriptionsSection!
+  shortdesc: String
+  slug: String!
+  title: String!
+  updatedAt: AWSDateTime!
+}
+
+enum ModelAttributeTypes {
+  _null
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+input CreateAccountInput {
+  id: ID
+  number: Int!
+  permissions: [String!]
+  schoolAccountsId: ID
+  usercount: Int!
+}
+
+input CreateCourseDescriptionsInfoBoxInput {
+  id: ID
+  name: String!
+}
+
+input CreateCourseDescriptionsInput {
+  id: ID
+  longdesc: [String!]!
+  shortdesc: String!
+  subtitle: String!
+  title: String!
+}
+
+input CreateCourseDescriptionsSectionInput {
+  courseDescriptionsSectionsId: ID!
+  desc: String
+  id: ID
+  name: String!
+  number: Int!
+}
+
+input CreateCourseInput {
+  abbr: String!
+  courseDescriptionsId: ID
+  courseVisualsId: ID
+  courseid: ID!
+  id: ID
+  level: String!
+  testCoursesId: ID!
+  videocount: Int
+}
+
+input CreateCourseVisualsInput {
+  id: ID
+  themename: String
+  tnurl: String
+}
+
+input CreateInfoBoxItemInput {
+  courseDescriptionsInfoBoxItemsId: ID!
+  icon: String!
+  id: ID
+  text: String!
+}
+
+input CreateSchoolInput {
+  id: ID
+  name: String!
+  number: Int!
+}
+
+input CreateTestInput {
+  abbr: String!
+  fullname: String!
+  id: ID
+  longdesc: [String!]
+  shortdesc: String
+  shortname: String!
+}
+
+input CreateUserInput {
+  accountUsersId: ID
+  id: ID
+  number: Int!
+  password: String!
+  username: String!
+}
+
+input CreateVideoInput {
+  courseID: ID!
+  day: Int
+  id: ID
+  longdesc: [String!]
+  shortdesc: String
+  slug: String!
+  title: String!
+}
+
+input DeleteAccountInput {
+  id: ID!
+}
+
+input DeleteCourseDescriptionsInfoBoxInput {
+  id: ID!
+}
+
+input DeleteCourseDescriptionsInput {
+  id: ID!
+}
+
+input DeleteCourseDescriptionsSectionInput {
+  id: ID!
+}
+
+input DeleteCourseInput {
+  id: ID!
+}
+
+input DeleteCourseVisualsInput {
+  id: ID!
+}
+
+input DeleteInfoBoxItemInput {
+  id: ID!
+}
+
+input DeleteSchoolInput {
+  id: ID!
+}
+
+input DeleteTestInput {
+  id: ID!
+}
+
+input DeleteUserInput {
+  id: ID!
+}
+
+input DeleteVideoInput {
+  id: ID!
+}
+
+input ModelAccountConditionInput {
+  and: [ModelAccountConditionInput]
+  not: ModelAccountConditionInput
+  number: ModelIntInput
+  or: [ModelAccountConditionInput]
+  permissions: ModelStringInput
+  schoolAccountsId: ModelIDInput
+  usercount: ModelIntInput
+}
+
+input ModelAccountFilterInput {
+  and: [ModelAccountFilterInput]
+  not: ModelAccountFilterInput
+  number: ModelIntInput
+  or: [ModelAccountFilterInput]
+  permissions: ModelStringInput
+  schoolAccountsId: ModelIDInput
+  usercount: ModelIntInput
+}
+
+input ModelBooleanInput {
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  eq: Boolean
+  ne: Boolean
+}
+
+input ModelCourseConditionInput {
+  abbr: ModelStringInput
+  and: [ModelCourseConditionInput]
+  courseDescriptionsId: ModelIDInput
+  courseVisualsId: ModelIDInput
+  courseid: ModelIDInput
+  level: ModelStringInput
+  not: ModelCourseConditionInput
+  or: [ModelCourseConditionInput]
+  testCoursesId: ModelIDInput
+  videocount: ModelIntInput
+}
+
+input ModelCourseDescriptionsConditionInput {
+  and: [ModelCourseDescriptionsConditionInput]
+  longdesc: ModelStringInput
+  not: ModelCourseDescriptionsConditionInput
+  or: [ModelCourseDescriptionsConditionInput]
+  shortdesc: ModelStringInput
+  subtitle: ModelStringInput
+  title: ModelStringInput
+}
+
+input ModelCourseDescriptionsFilterInput {
+  and: [ModelCourseDescriptionsFilterInput]
+  longdesc: ModelStringInput
+  not: ModelCourseDescriptionsFilterInput
+  or: [ModelCourseDescriptionsFilterInput]
+  shortdesc: ModelStringInput
+  subtitle: ModelStringInput
+  title: ModelStringInput
+}
+
+input ModelCourseDescriptionsInfoBoxConditionInput {
+  and: [ModelCourseDescriptionsInfoBoxConditionInput]
+  name: ModelStringInput
+  not: ModelCourseDescriptionsInfoBoxConditionInput
+  or: [ModelCourseDescriptionsInfoBoxConditionInput]
+}
+
+input ModelCourseDescriptionsInfoBoxFilterInput {
+  and: [ModelCourseDescriptionsInfoBoxFilterInput]
+  name: ModelStringInput
+  not: ModelCourseDescriptionsInfoBoxFilterInput
+  or: [ModelCourseDescriptionsInfoBoxFilterInput]
+}
+
+input ModelCourseDescriptionsSectionConditionInput {
+  and: [ModelCourseDescriptionsSectionConditionInput]
+  courseDescriptionsSectionsId: ModelIDInput
+  desc: ModelStringInput
+  name: ModelStringInput
+  not: ModelCourseDescriptionsSectionConditionInput
+  number: ModelIntInput
+  or: [ModelCourseDescriptionsSectionConditionInput]
+}
+
+input ModelCourseDescriptionsSectionFilterInput {
+  and: [ModelCourseDescriptionsSectionFilterInput]
+  courseDescriptionsSectionsId: ModelIDInput
+  desc: ModelStringInput
+  name: ModelStringInput
+  not: ModelCourseDescriptionsSectionFilterInput
+  number: ModelIntInput
+  or: [ModelCourseDescriptionsSectionFilterInput]
+}
+
+input ModelCourseFilterInput {
+  abbr: ModelStringInput
+  and: [ModelCourseFilterInput]
+  courseDescriptionsId: ModelIDInput
+  courseVisualsId: ModelIDInput
+  courseid: ModelIDInput
+  level: ModelStringInput
+  not: ModelCourseFilterInput
+  or: [ModelCourseFilterInput]
+  testCoursesId: ModelIDInput
+  videocount: ModelIntInput
+}
+
+input ModelCourseVisualsConditionInput {
+  and: [ModelCourseVisualsConditionInput]
+  not: ModelCourseVisualsConditionInput
+  or: [ModelCourseVisualsConditionInput]
+  themename: ModelStringInput
+  tnurl: ModelStringInput
+}
+
+input ModelCourseVisualsFilterInput {
+  and: [ModelCourseVisualsFilterInput]
+  not: ModelCourseVisualsFilterInput
+  or: [ModelCourseVisualsFilterInput]
+  themename: ModelStringInput
+  tnurl: ModelStringInput
+}
+
+input ModelFloatInput {
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  between: [Float]
+  eq: Float
+  ge: Float
+  gt: Float
+  le: Float
+  lt: Float
+  ne: Float
+}
+
+input ModelIDInput {
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  beginsWith: ID
+  between: [ID]
+  contains: ID
+  eq: ID
+  ge: ID
+  gt: ID
+  le: ID
+  lt: ID
+  ne: ID
+  notContains: ID
+  size: ModelSizeInput
+}
+
+input ModelInfoBoxItemConditionInput {
+  and: [ModelInfoBoxItemConditionInput]
+  courseDescriptionsInfoBoxItemsId: ModelIDInput
+  icon: ModelStringInput
+  not: ModelInfoBoxItemConditionInput
+  or: [ModelInfoBoxItemConditionInput]
+  text: ModelStringInput
+}
+
+input ModelInfoBoxItemFilterInput {
+  and: [ModelInfoBoxItemFilterInput]
+  courseDescriptionsInfoBoxItemsId: ModelIDInput
+  icon: ModelStringInput
+  not: ModelInfoBoxItemFilterInput
+  or: [ModelInfoBoxItemFilterInput]
+  text: ModelStringInput
+}
+
+input ModelIntInput {
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  between: [Int]
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+  ne: Int
+}
+
+input ModelIntKeyConditionInput {
+  between: [Int]
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+}
+
+input ModelSchoolConditionInput {
+  and: [ModelSchoolConditionInput]
+  name: ModelStringInput
+  not: ModelSchoolConditionInput
+  number: ModelIntInput
+  or: [ModelSchoolConditionInput]
+}
+
+input ModelSchoolFilterInput {
+  and: [ModelSchoolFilterInput]
+  name: ModelStringInput
+  not: ModelSchoolFilterInput
+  number: ModelIntInput
+  or: [ModelSchoolFilterInput]
+}
+
+input ModelSizeInput {
+  between: [Int]
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+  ne: Int
+}
+
+input ModelStringInput {
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  beginsWith: String
+  between: [String]
+  contains: String
+  eq: String
+  ge: String
+  gt: String
+  le: String
+  lt: String
+  ne: String
+  notContains: String
+  size: ModelSizeInput
+}
+
+input ModelTestConditionInput {
+  abbr: ModelStringInput
+  and: [ModelTestConditionInput]
+  fullname: ModelStringInput
+  longdesc: ModelStringInput
+  not: ModelTestConditionInput
+  or: [ModelTestConditionInput]
+  shortdesc: ModelStringInput
+  shortname: ModelStringInput
+}
+
+input ModelTestFilterInput {
+  abbr: ModelStringInput
+  and: [ModelTestFilterInput]
+  fullname: ModelStringInput
+  longdesc: ModelStringInput
+  not: ModelTestFilterInput
+  or: [ModelTestFilterInput]
+  shortdesc: ModelStringInput
+  shortname: ModelStringInput
+}
+
+input ModelUserConditionInput {
+  accountUsersId: ModelIDInput
+  and: [ModelUserConditionInput]
+  not: ModelUserConditionInput
+  number: ModelIntInput
+  or: [ModelUserConditionInput]
+  password: ModelStringInput
+  username: ModelStringInput
+}
+
+input ModelUserFilterInput {
+  accountUsersId: ModelIDInput
+  and: [ModelUserFilterInput]
+  not: ModelUserFilterInput
+  number: ModelIntInput
+  or: [ModelUserFilterInput]
+  password: ModelStringInput
+  username: ModelStringInput
+}
+
+input ModelVideoConditionInput {
+  and: [ModelVideoConditionInput]
+  courseID: ModelIDInput
+  day: ModelIntInput
+  longdesc: ModelStringInput
+  not: ModelVideoConditionInput
+  or: [ModelVideoConditionInput]
+  shortdesc: ModelStringInput
+  slug: ModelStringInput
+  title: ModelStringInput
+}
+
+input ModelVideoFilterInput {
+  and: [ModelVideoFilterInput]
+  courseID: ModelIDInput
+  day: ModelIntInput
+  longdesc: ModelStringInput
+  not: ModelVideoFilterInput
+  or: [ModelVideoFilterInput]
+  shortdesc: ModelStringInput
+  slug: ModelStringInput
+  title: ModelStringInput
+}
+
+input UpdateAccountInput {
+  id: ID!
+  number: Int
+  permissions: [String!]
+  schoolAccountsId: ID
+  usercount: Int
+}
+
+input UpdateCourseDescriptionsInfoBoxInput {
+  id: ID!
+  name: String
+}
+
+input UpdateCourseDescriptionsInput {
+  id: ID!
+  longdesc: [String!]
+  shortdesc: String
+  subtitle: String
+  title: String
+}
+
+input UpdateCourseDescriptionsSectionInput {
+  courseDescriptionsSectionsId: ID
+  desc: String
+  id: ID!
+  name: String
+  number: Int
+}
+
+input UpdateCourseInput {
+  abbr: String
+  courseDescriptionsId: ID
+  courseVisualsId: ID
+  courseid: ID
+  id: ID!
+  level: String
+  testCoursesId: ID
+  videocount: Int
+}
+
+input UpdateCourseVisualsInput {
+  id: ID!
+  themename: String
+  tnurl: String
+}
+
+input UpdateInfoBoxItemInput {
+  courseDescriptionsInfoBoxItemsId: ID
+  icon: String
+  id: ID!
+  text: String
+}
+
+input UpdateSchoolInput {
+  id: ID!
+  name: String
+  number: Int
+}
+
+input UpdateTestInput {
+  abbr: String
+  fullname: String
+  id: ID!
+  longdesc: [String!]
+  shortdesc: String
+  shortname: String
+}
+
+input UpdateUserInput {
+  accountUsersId: ID
+  id: ID!
+  number: Int
+  password: String
+  username: String
+}
+
+input UpdateVideoInput {
+  courseID: ID
+  day: Int
+  id: ID!
+  longdesc: [String!]
+  shortdesc: String
+  slug: String
+  title: String
+}

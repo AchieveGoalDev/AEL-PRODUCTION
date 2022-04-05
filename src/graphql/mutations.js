@@ -1,4199 +1,4199 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createSchool = /* GraphQL */ `
-  mutation CreateSchool(
-    $input: CreateSchoolInput!
-    $condition: ModelSchoolConditionInput
-  ) {
-    createSchool(input: $input, condition: $condition) {
-      number
-      name
-      accounts {
-        items {
-          number
-          permissions
-          usercount
-          users {
-            items {
-              number
-              username
-              password
-              id
-              createdAt
-              updatedAt
-              accountUsersId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-          schoolAccountsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateSchool = /* GraphQL */ `
-  mutation UpdateSchool(
-    $input: UpdateSchoolInput!
-    $condition: ModelSchoolConditionInput
-  ) {
-    updateSchool(input: $input, condition: $condition) {
-      number
-      name
-      accounts {
-        items {
-          number
-          permissions
-          usercount
-          users {
-            items {
-              number
-              username
-              password
-              id
-              createdAt
-              updatedAt
-              accountUsersId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-          schoolAccountsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteSchool = /* GraphQL */ `
-  mutation DeleteSchool(
-    $input: DeleteSchoolInput!
-    $condition: ModelSchoolConditionInput
-  ) {
-    deleteSchool(input: $input, condition: $condition) {
-      number
-      name
-      accounts {
-        items {
-          number
-          permissions
-          usercount
-          users {
-            items {
-              number
-              username
-              password
-              id
-              createdAt
-              updatedAt
-              accountUsersId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-          schoolAccountsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const createAccount = /* GraphQL */ `
   mutation CreateAccount(
+    $condition: ModelAccountConditionInput
     $input: CreateAccountInput!
-    $condition: ModelAccountConditionInput
   ) {
-    createAccount(input: $input, condition: $condition) {
+    createAccount(condition: $condition, input: $input) {
+      createdAt
+      id
       number
       permissions
+      schoolAccountsId
+      updatedAt
       usercount
       users {
         items {
-          number
-          username
-          password
-          id
-          createdAt
-          updatedAt
           accountUsersId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-      schoolAccountsId
-    }
-  }
-`;
-export const updateAccount = /* GraphQL */ `
-  mutation UpdateAccount(
-    $input: UpdateAccountInput!
-    $condition: ModelAccountConditionInput
-  ) {
-    updateAccount(input: $input, condition: $condition) {
-      number
-      permissions
-      usercount
-      users {
-        items {
+          createdAt
+          id
           number
-          username
           password
-          id
-          createdAt
           updatedAt
-          accountUsersId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-      schoolAccountsId
-    }
-  }
-`;
-export const deleteAccount = /* GraphQL */ `
-  mutation DeleteAccount(
-    $input: DeleteAccountInput!
-    $condition: ModelAccountConditionInput
-  ) {
-    deleteAccount(input: $input, condition: $condition) {
-      number
-      permissions
-      usercount
-      users {
-        items {
-          number
           username
-          password
-          id
-          createdAt
-          updatedAt
-          accountUsersId
         }
         nextToken
       }
-      id
-      createdAt
-      updatedAt
-      schoolAccountsId
-    }
-  }
-`;
-export const createUser = /* GraphQL */ `
-  mutation CreateUser(
-    $input: CreateUserInput!
-    $condition: ModelUserConditionInput
-  ) {
-    createUser(input: $input, condition: $condition) {
-      number
-      username
-      password
-      id
-      createdAt
-      updatedAt
-      accountUsersId
-    }
-  }
-`;
-export const updateUser = /* GraphQL */ `
-  mutation UpdateUser(
-    $input: UpdateUserInput!
-    $condition: ModelUserConditionInput
-  ) {
-    updateUser(input: $input, condition: $condition) {
-      number
-      username
-      password
-      id
-      createdAt
-      updatedAt
-      accountUsersId
-    }
-  }
-`;
-export const deleteUser = /* GraphQL */ `
-  mutation DeleteUser(
-    $input: DeleteUserInput!
-    $condition: ModelUserConditionInput
-  ) {
-    deleteUser(input: $input, condition: $condition) {
-      number
-      username
-      password
-      id
-      createdAt
-      updatedAt
-      accountUsersId
-    }
-  }
-`;
-export const createTest = /* GraphQL */ `
-  mutation CreateTest(
-    $input: CreateTestInput!
-    $condition: ModelTestConditionInput
-  ) {
-    createTest(input: $input, condition: $condition) {
-      fullname
-      shortname
-      abbr
-      shortdesc
-      longdesc
-      courses {
-        items {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateTest = /* GraphQL */ `
-  mutation UpdateTest(
-    $input: UpdateTestInput!
-    $condition: ModelTestConditionInput
-  ) {
-    updateTest(input: $input, condition: $condition) {
-      fullname
-      shortname
-      abbr
-      shortdesc
-      longdesc
-      courses {
-        items {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteTest = /* GraphQL */ `
-  mutation DeleteTest(
-    $input: DeleteTestInput!
-    $condition: ModelTestConditionInput
-  ) {
-    deleteTest(input: $input, condition: $condition) {
-      fullname
-      shortname
-      abbr
-      shortdesc
-      longdesc
-      courses {
-        items {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
     }
   }
 `;
 export const createCourse = /* GraphQL */ `
   mutation CreateCourse(
+    $condition: ModelCourseConditionInput
     $input: CreateCourseInput!
-    $condition: ModelCourseConditionInput
   ) {
-    createCourse(input: $input, condition: $condition) {
+    createCourse(condition: $condition, input: $input) {
+      abbr
+      courseDescriptionsId
+      courseVisualsId
       courseid
-      test {
-        fullname
-        shortname
-        abbr
-        shortdesc
-        longdesc
-        courses {
-          items {
-            courseid
-            test {
-              fullname
-              shortname
+      createdAt
+      descriptions {
+        course {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
               abbr
-              shortdesc
-              longdesc
-              id
+              courseDescriptionsId
+              courseVisualsId
+              courseid
               createdAt
+              id
+              level
+              testCoursesId
               updatedAt
+              videocount
             }
-            level
-            abbr
-            videos {
+            createdAt
+            id
+            longdesc
+            sections {
               nextToken
             }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
               createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
               updatedAt
             }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
               createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        longdesc
+        sections {
+          items {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
+            name
+            number
             updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
           }
           nextToken
         }
-        id
-        createdAt
+        shortdesc
+        subtitle
+        title
         updatedAt
       }
+      id
       level
-      abbr
-      videos {
-        items {
-          courseID
-          course {
+      test {
+        abbr
+        courses {
+          items {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
             courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
+            createdAt
+            descriptions {
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
+            id
             level
-            abbr
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
             videos {
               nextToken
             }
-            videocount
             visuals {
-              tnurl
-              themename
-              id
               createdAt
+              id
+              themename
+              tnurl
               updatedAt
             }
+          }
+          nextToken
+        }
+        createdAt
+        fullname
+        id
+        longdesc
+        shortdesc
+        shortname
+        updatedAt
+      }
+      testCoursesId
+      updatedAt
+      videocount
+      videos {
+        items {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
             descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          day
-          title
-          shortdesc
-          longdesc
-          slug
-          section {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
+            level
+            test {
+              abbr
               createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
               updatedAt
             }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          courseID
+          createdAt
+          day
+          id
+          longdesc
+          section {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
             name
             number
-            desc
-            id
-            createdAt
             updatedAt
-            courseDescriptionsSectionsId
           }
-          id
-          createdAt
+          shortdesc
+          slug
+          title
           updatedAt
         }
         nextToken
       }
-      videocount
       visuals {
         course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
           abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
           descriptions {
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
-            title
-            subtitle
-            shortdesc
+            createdAt
+            id
             longdesc
             sections {
               nextToken
             }
-            id
-            createdAt
+            shortdesc
+            subtitle
+            title
             updatedAt
           }
           id
-          createdAt
-          updatedAt
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
           testCoursesId
-          courseVisualsId
-          courseDescriptionsId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
         }
-        tnurl
+        createdAt
+        id
         themename
-        id
-        createdAt
-        updatedAt
-      }
-      descriptions {
-        course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        title
-        subtitle
-        shortdesc
-        longdesc
-        sections {
-          items {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            name
-            number
-            desc
-            id
-            createdAt
-            updatedAt
-            courseDescriptionsSectionsId
-          }
-          nextToken
-        }
-        id
-        createdAt
-        updatedAt
-      }
-      id
-      createdAt
-      updatedAt
-      testCoursesId
-      courseVisualsId
-      courseDescriptionsId
-    }
-  }
-`;
-export const updateCourse = /* GraphQL */ `
-  mutation UpdateCourse(
-    $input: UpdateCourseInput!
-    $condition: ModelCourseConditionInput
-  ) {
-    updateCourse(input: $input, condition: $condition) {
-      courseid
-      test {
-        fullname
-        shortname
-        abbr
-        shortdesc
-        longdesc
-        courses {
-          items {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          nextToken
-        }
-        id
-        createdAt
-        updatedAt
-      }
-      level
-      abbr
-      videos {
-        items {
-          courseID
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          day
-          title
-          shortdesc
-          longdesc
-          slug
-          section {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            name
-            number
-            desc
-            id
-            createdAt
-            updatedAt
-            courseDescriptionsSectionsId
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      videocount
-      visuals {
-        course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
         tnurl
-        themename
-        id
-        createdAt
         updatedAt
       }
-      descriptions {
-        course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        title
-        subtitle
-        shortdesc
-        longdesc
-        sections {
-          items {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            name
-            number
-            desc
-            id
-            createdAt
-            updatedAt
-            courseDescriptionsSectionsId
-          }
-          nextToken
-        }
-        id
-        createdAt
-        updatedAt
-      }
-      id
-      createdAt
-      updatedAt
-      testCoursesId
-      courseVisualsId
-      courseDescriptionsId
-    }
-  }
-`;
-export const deleteCourse = /* GraphQL */ `
-  mutation DeleteCourse(
-    $input: DeleteCourseInput!
-    $condition: ModelCourseConditionInput
-  ) {
-    deleteCourse(input: $input, condition: $condition) {
-      courseid
-      test {
-        fullname
-        shortname
-        abbr
-        shortdesc
-        longdesc
-        courses {
-          items {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          nextToken
-        }
-        id
-        createdAt
-        updatedAt
-      }
-      level
-      abbr
-      videos {
-        items {
-          courseID
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          day
-          title
-          shortdesc
-          longdesc
-          slug
-          section {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            name
-            number
-            desc
-            id
-            createdAt
-            updatedAt
-            courseDescriptionsSectionsId
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      videocount
-      visuals {
-        course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        tnurl
-        themename
-        id
-        createdAt
-        updatedAt
-      }
-      descriptions {
-        course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        title
-        subtitle
-        shortdesc
-        longdesc
-        sections {
-          items {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            name
-            number
-            desc
-            id
-            createdAt
-            updatedAt
-            courseDescriptionsSectionsId
-          }
-          nextToken
-        }
-        id
-        createdAt
-        updatedAt
-      }
-      id
-      createdAt
-      updatedAt
-      testCoursesId
-      courseVisualsId
-      courseDescriptionsId
-    }
-  }
-`;
-export const createCourseVisuals = /* GraphQL */ `
-  mutation CreateCourseVisuals(
-    $input: CreateCourseVisualsInput!
-    $condition: ModelCourseVisualsConditionInput
-  ) {
-    createCourseVisuals(input: $input, condition: $condition) {
-      course {
-        courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        level
-        abbr
-        videos {
-          items {
-            courseID
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            day
-            title
-            shortdesc
-            longdesc
-            slug
-            section {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        videocount
-        visuals {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          tnurl
-          themename
-          id
-          createdAt
-          updatedAt
-        }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
-      }
-      tnurl
-      themename
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateCourseVisuals = /* GraphQL */ `
-  mutation UpdateCourseVisuals(
-    $input: UpdateCourseVisualsInput!
-    $condition: ModelCourseVisualsConditionInput
-  ) {
-    updateCourseVisuals(input: $input, condition: $condition) {
-      course {
-        courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        level
-        abbr
-        videos {
-          items {
-            courseID
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            day
-            title
-            shortdesc
-            longdesc
-            slug
-            section {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        videocount
-        visuals {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          tnurl
-          themename
-          id
-          createdAt
-          updatedAt
-        }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
-      }
-      tnurl
-      themename
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteCourseVisuals = /* GraphQL */ `
-  mutation DeleteCourseVisuals(
-    $input: DeleteCourseVisualsInput!
-    $condition: ModelCourseVisualsConditionInput
-  ) {
-    deleteCourseVisuals(input: $input, condition: $condition) {
-      course {
-        courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        level
-        abbr
-        videos {
-          items {
-            courseID
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            day
-            title
-            shortdesc
-            longdesc
-            slug
-            section {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        videocount
-        visuals {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          tnurl
-          themename
-          id
-          createdAt
-          updatedAt
-        }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
-      }
-      tnurl
-      themename
-      id
-      createdAt
-      updatedAt
     }
   }
 `;
 export const createCourseDescriptions = /* GraphQL */ `
   mutation CreateCourseDescriptions(
+    $condition: ModelCourseDescriptionsConditionInput
     $input: CreateCourseDescriptionsInput!
-    $condition: ModelCourseDescriptionsConditionInput
   ) {
-    createCourseDescriptions(input: $input, condition: $condition) {
+    createCourseDescriptions(condition: $condition, input: $input) {
       course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
         courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
             }
             nextToken
           }
-          id
-          createdAt
+          shortdesc
+          subtitle
+          title
           updatedAt
         }
+        id
         level
-        abbr
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
         videos {
           items {
-            courseID
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
+            courseID
+            createdAt
             day
-            title
-            shortdesc
+            id
             longdesc
-            slug
             section {
-              name
-              number
+              courseDescriptionsSectionsId
+              createdAt
               desc
               id
-              createdAt
+              name
+              number
               updatedAt
-              courseDescriptionsSectionsId
             }
-            id
-            createdAt
+            shortdesc
+            slug
+            title
             updatedAt
           }
           nextToken
         }
-        videocount
         visuals {
           course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
             abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
             descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
-            updatedAt
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
             testCoursesId
-            courseVisualsId
-            courseDescriptionsId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
           }
-          tnurl
+          createdAt
+          id
           themename
-          id
-          createdAt
+          tnurl
           updatedAt
         }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
       }
-      title
-      subtitle
-      shortdesc
+      createdAt
+      id
       longdesc
       sections {
         items {
+          courseDescriptionsSectionsId
+          createdAt
+          desc
           descripition {
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
-            title
-            subtitle
-            shortdesc
+            createdAt
+            id
             longdesc
             sections {
               nextToken
             }
-            id
-            createdAt
+            shortdesc
+            subtitle
+            title
             updatedAt
           }
+          id
           name
           number
-          desc
-          id
-          createdAt
           updatedAt
-          courseDescriptionsSectionsId
         }
         nextToken
       }
-      id
-      createdAt
+      shortdesc
+      subtitle
+      title
       updatedAt
     }
   }
 `;
-export const updateCourseDescriptions = /* GraphQL */ `
-  mutation UpdateCourseDescriptions(
-    $input: UpdateCourseDescriptionsInput!
-    $condition: ModelCourseDescriptionsConditionInput
+export const createCourseDescriptionsInfoBox = /* GraphQL */ `
+  mutation CreateCourseDescriptionsInfoBox(
+    $condition: ModelCourseDescriptionsInfoBoxConditionInput
+    $input: CreateCourseDescriptionsInfoBoxInput!
   ) {
-    updateCourseDescriptions(input: $input, condition: $condition) {
-      course {
-        courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        level
-        abbr
-        videos {
-          items {
-            courseID
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            day
-            title
-            shortdesc
-            longdesc
-            slug
-            section {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        videocount
-        visuals {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          tnurl
-          themename
-          id
-          createdAt
-          updatedAt
-        }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
-      }
-      title
-      subtitle
-      shortdesc
-      longdesc
-      sections {
+    createCourseDescriptionsInfoBox(condition: $condition, input: $input) {
+      createdAt
+      id
+      items {
         items {
-          descripition {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          name
-          number
-          desc
-          id
+          courseDescriptionsInfoBoxItemsId
           createdAt
+          icon
+          id
+          text
           updatedAt
-          courseDescriptionsSectionsId
         }
         nextToken
       }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteCourseDescriptions = /* GraphQL */ `
-  mutation DeleteCourseDescriptions(
-    $input: DeleteCourseDescriptionsInput!
-    $condition: ModelCourseDescriptionsConditionInput
-  ) {
-    deleteCourseDescriptions(input: $input, condition: $condition) {
-      course {
-        courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        level
-        abbr
-        videos {
-          items {
-            courseID
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            day
-            title
-            shortdesc
-            longdesc
-            slug
-            section {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        videocount
-        visuals {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          tnurl
-          themename
-          id
-          createdAt
-          updatedAt
-        }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
-      }
-      title
-      subtitle
-      shortdesc
-      longdesc
-      sections {
-        items {
-          descripition {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          name
-          number
-          desc
-          id
-          createdAt
-          updatedAt
-          courseDescriptionsSectionsId
-        }
-        nextToken
-      }
-      id
-      createdAt
+      name
       updatedAt
     }
   }
 `;
 export const createCourseDescriptionsSection = /* GraphQL */ `
   mutation CreateCourseDescriptionsSection(
+    $condition: ModelCourseDescriptionsSectionConditionInput
     $input: CreateCourseDescriptionsSectionInput!
-    $condition: ModelCourseDescriptionsSectionConditionInput
   ) {
-    createCourseDescriptionsSection(input: $input, condition: $condition) {
+    createCourseDescriptionsSection(condition: $condition, input: $input) {
+      courseDescriptionsSectionsId
+      createdAt
+      desc
       descripition {
         course {
-          courseid
-          test {
-            fullname
-            shortname
-            abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          level
           abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
           descriptions {
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
-            title
-            subtitle
-            shortdesc
+            createdAt
+            id
             longdesc
             sections {
               nextToken
             }
-            id
-            createdAt
+            shortdesc
+            subtitle
+            title
             updatedAt
           }
           id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
-        }
-        title
-        subtitle
-        shortdesc
-        longdesc
-        sections {
-          items {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            name
-            number
-            desc
-            id
-            createdAt
-            updatedAt
-            courseDescriptionsSectionsId
-          }
-          nextToken
-        }
-        id
-        createdAt
-        updatedAt
-      }
-      name
-      number
-      desc
-      id
-      createdAt
-      updatedAt
-      courseDescriptionsSectionsId
-    }
-  }
-`;
-export const updateCourseDescriptionsSection = /* GraphQL */ `
-  mutation UpdateCourseDescriptionsSection(
-    $input: UpdateCourseDescriptionsSectionInput!
-    $condition: ModelCourseDescriptionsSectionConditionInput
-  ) {
-    updateCourseDescriptionsSection(input: $input, condition: $condition) {
-      descripition {
-        course {
-          courseid
+          level
           test {
-            fullname
-            shortname
             abbr
-            shortdesc
-            longdesc
             courses {
               nextToken
             }
-            id
             createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
             updatedAt
           }
-          level
-          abbr
+          testCoursesId
+          updatedAt
+          videocount
           videos {
             items {
               courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
               createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
               updatedAt
             }
             nextToken
           }
-          videocount
           visuals {
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
-            tnurl
+            createdAt
+            id
             themename
-            id
-            createdAt
+            tnurl
             updatedAt
           }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
-          updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
         }
-        title
-        subtitle
-        shortdesc
+        createdAt
+        id
         longdesc
         sections {
           items {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
             descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
+            id
             name
             number
-            desc
-            id
-            createdAt
             updatedAt
-            courseDescriptionsSectionsId
           }
           nextToken
         }
-        id
-        createdAt
+        shortdesc
+        subtitle
+        title
         updatedAt
       }
+      id
       name
       number
-      desc
-      id
-      createdAt
       updatedAt
-      courseDescriptionsSectionsId
     }
   }
 `;
-export const deleteCourseDescriptionsSection = /* GraphQL */ `
-  mutation DeleteCourseDescriptionsSection(
-    $input: DeleteCourseDescriptionsSectionInput!
-    $condition: ModelCourseDescriptionsSectionConditionInput
+export const createCourseVisuals = /* GraphQL */ `
+  mutation CreateCourseVisuals(
+    $condition: ModelCourseVisualsConditionInput
+    $input: CreateCourseVisualsInput!
   ) {
-    deleteCourseDescriptionsSection(input: $input, condition: $condition) {
-      descripition {
-        course {
-          courseid
-          test {
-            fullname
-            shortname
+    createCourseVisuals(condition: $condition, input: $input) {
+      course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
+        courseid
+        createdAt
+        descriptions {
+          course {
             abbr
-            shortdesc
-            longdesc
-            courses {
-              nextToken
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
             }
             id
-            createdAt
-            updatedAt
-          }
-          level
-          abbr
-          videos {
-            items {
-              courseID
-              day
-              title
-              shortdesc
-              longdesc
-              slug
-              id
+            level
+            test {
+              abbr
               createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
               updatedAt
             }
             nextToken
           }
-          videocount
-          visuals {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            tnurl
-            themename
-            id
-            createdAt
-            updatedAt
-          }
-          descriptions {
-            course {
-              courseid
-              level
-              abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
-            }
-            title
-            subtitle
-            shortdesc
-            longdesc
-            sections {
-              nextToken
-            }
-            id
-            createdAt
-            updatedAt
-          }
-          id
-          createdAt
+          shortdesc
+          subtitle
+          title
           updatedAt
-          testCoursesId
-          courseVisualsId
-          courseDescriptionsId
         }
-        title
-        subtitle
-        shortdesc
-        longdesc
-        sections {
-          items {
-            descripition {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
+        id
+        level
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
               createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
+        videos {
+          items {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            courseID
+            createdAt
+            day
+            id
+            longdesc
+            section {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
               updatedAt
             }
-            name
-            number
-            desc
-            id
-            createdAt
+            shortdesc
+            slug
+            title
             updatedAt
-            courseDescriptionsSectionsId
           }
           nextToken
         }
-        id
-        createdAt
-        updatedAt
-      }
-      name
-      number
-      desc
-      id
-      createdAt
-      updatedAt
-      courseDescriptionsSectionsId
-    }
-  }
-`;
-export const createCourseDescriptionsInfoBox = /* GraphQL */ `
-  mutation CreateCourseDescriptionsInfoBox(
-    $input: CreateCourseDescriptionsInfoBoxInput!
-    $condition: ModelCourseDescriptionsInfoBoxConditionInput
-  ) {
-    createCourseDescriptionsInfoBox(input: $input, condition: $condition) {
-      name
-      items {
-        items {
-          icon
-          text
-          id
+        visuals {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
           createdAt
-          updatedAt
-          courseDescriptionsInfoBoxItemsId
-        }
-        nextToken
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateCourseDescriptionsInfoBox = /* GraphQL */ `
-  mutation UpdateCourseDescriptionsInfoBox(
-    $input: UpdateCourseDescriptionsInfoBoxInput!
-    $condition: ModelCourseDescriptionsInfoBoxConditionInput
-  ) {
-    updateCourseDescriptionsInfoBox(input: $input, condition: $condition) {
-      name
-      items {
-        items {
-          icon
-          text
           id
-          createdAt
+          themename
+          tnurl
           updatedAt
-          courseDescriptionsInfoBoxItemsId
         }
-        nextToken
       }
-      id
       createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteCourseDescriptionsInfoBox = /* GraphQL */ `
-  mutation DeleteCourseDescriptionsInfoBox(
-    $input: DeleteCourseDescriptionsInfoBoxInput!
-    $condition: ModelCourseDescriptionsInfoBoxConditionInput
-  ) {
-    deleteCourseDescriptionsInfoBox(input: $input, condition: $condition) {
-      name
-      items {
-        items {
-          icon
-          text
-          id
-          createdAt
-          updatedAt
-          courseDescriptionsInfoBoxItemsId
-        }
-        nextToken
-      }
       id
-      createdAt
+      themename
+      tnurl
       updatedAt
     }
   }
 `;
 export const createInfoBoxItem = /* GraphQL */ `
   mutation CreateInfoBoxItem(
+    $condition: ModelInfoBoxItemConditionInput
     $input: CreateInfoBoxItemInput!
-    $condition: ModelInfoBoxItemConditionInput
   ) {
-    createInfoBoxItem(input: $input, condition: $condition) {
-      icon
-      text
-      id
-      createdAt
-      updatedAt
+    createInfoBoxItem(condition: $condition, input: $input) {
       courseDescriptionsInfoBoxItemsId
+      createdAt
+      icon
+      id
+      text
+      updatedAt
     }
   }
 `;
-export const updateInfoBoxItem = /* GraphQL */ `
-  mutation UpdateInfoBoxItem(
-    $input: UpdateInfoBoxItemInput!
-    $condition: ModelInfoBoxItemConditionInput
+export const createSchool = /* GraphQL */ `
+  mutation CreateSchool(
+    $condition: ModelSchoolConditionInput
+    $input: CreateSchoolInput!
   ) {
-    updateInfoBoxItem(input: $input, condition: $condition) {
-      icon
-      text
-      id
+    createSchool(condition: $condition, input: $input) {
+      accounts {
+        items {
+          createdAt
+          id
+          number
+          permissions
+          schoolAccountsId
+          updatedAt
+          usercount
+          users {
+            items {
+              accountUsersId
+              createdAt
+              id
+              number
+              password
+              updatedAt
+              username
+            }
+            nextToken
+          }
+        }
+        nextToken
+      }
       createdAt
+      id
+      name
+      number
       updatedAt
-      courseDescriptionsInfoBoxItemsId
     }
   }
 `;
-export const deleteInfoBoxItem = /* GraphQL */ `
-  mutation DeleteInfoBoxItem(
-    $input: DeleteInfoBoxItemInput!
-    $condition: ModelInfoBoxItemConditionInput
+export const createTest = /* GraphQL */ `
+  mutation CreateTest(
+    $condition: ModelTestConditionInput
+    $input: CreateTestInput!
   ) {
-    deleteInfoBoxItem(input: $input, condition: $condition) {
-      icon
-      text
-      id
+    createTest(condition: $condition, input: $input) {
+      abbr
+      courses {
+        items {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        nextToken
+      }
       createdAt
+      fullname
+      id
+      longdesc
+      shortdesc
+      shortname
       updatedAt
-      courseDescriptionsInfoBoxItemsId
+    }
+  }
+`;
+export const createUser = /* GraphQL */ `
+  mutation CreateUser(
+    $condition: ModelUserConditionInput
+    $input: CreateUserInput!
+  ) {
+    createUser(condition: $condition, input: $input) {
+      accountUsersId
+      createdAt
+      id
+      number
+      password
+      updatedAt
+      username
     }
   }
 `;
 export const createVideo = /* GraphQL */ `
   mutation CreateVideo(
-    $input: CreateVideoInput!
     $condition: ModelVideoConditionInput
+    $input: CreateVideoInput!
   ) {
-    createVideo(input: $input, condition: $condition) {
-      courseID
+    createVideo(condition: $condition, input: $input) {
       course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
         courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
             }
             nextToken
           }
-          id
-          createdAt
+          shortdesc
+          subtitle
+          title
           updatedAt
         }
+        id
         level
-        abbr
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
         videos {
           items {
-            courseID
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
+            courseID
+            createdAt
             day
-            title
-            shortdesc
+            id
             longdesc
-            slug
             section {
-              name
-              number
+              courseDescriptionsSectionsId
+              createdAt
               desc
               id
-              createdAt
+              name
+              number
               updatedAt
-              courseDescriptionsSectionsId
             }
-            id
-            createdAt
+            shortdesc
+            slug
+            title
             updatedAt
           }
           nextToken
         }
-        videocount
         visuals {
           course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
             abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
             descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
-            updatedAt
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
             testCoursesId
-            courseVisualsId
-            courseDescriptionsId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
           }
-          tnurl
+          createdAt
+          id
           themename
-          id
-          createdAt
+          tnurl
           updatedAt
         }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
       }
+      courseID
+      createdAt
       day
-      title
-      shortdesc
+      id
       longdesc
-      slug
       section {
+        courseDescriptionsSectionsId
+        createdAt
+        desc
         descripition {
           course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
             abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
             descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
-            updatedAt
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
             testCoursesId
-            courseVisualsId
-            courseDescriptionsId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
           }
-          title
-          subtitle
-          shortdesc
+          createdAt
+          id
           longdesc
           sections {
             items {
-              name
-              number
+              courseDescriptionsSectionsId
+              createdAt
               desc
               id
-              createdAt
+              name
+              number
               updatedAt
-              courseDescriptionsSectionsId
             }
             nextToken
           }
-          id
-          createdAt
+          shortdesc
+          subtitle
+          title
           updatedAt
         }
+        id
         name
         number
-        desc
-        id
-        createdAt
         updatedAt
-        courseDescriptionsSectionsId
       }
-      id
-      createdAt
+      shortdesc
+      slug
+      title
       updatedAt
     }
   }
 `;
-export const updateVideo = /* GraphQL */ `
-  mutation UpdateVideo(
-    $input: UpdateVideoInput!
-    $condition: ModelVideoConditionInput
+export const deleteAccount = /* GraphQL */ `
+  mutation DeleteAccount(
+    $condition: ModelAccountConditionInput
+    $input: DeleteAccountInput!
   ) {
-    updateVideo(input: $input, condition: $condition) {
-      courseID
-      course {
-        courseid
-        test {
-          fullname
-          shortname
+    deleteAccount(condition: $condition, input: $input) {
+      createdAt
+      id
+      number
+      permissions
+      schoolAccountsId
+      updatedAt
+      usercount
+      users {
+        items {
+          accountUsersId
+          createdAt
+          id
+          number
+          password
+          updatedAt
+          username
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const deleteCourse = /* GraphQL */ `
+  mutation DeleteCourse(
+    $condition: ModelCourseConditionInput
+    $input: DeleteCourseInput!
+  ) {
+    deleteCourse(condition: $condition, input: $input) {
+      abbr
+      courseDescriptionsId
+      courseVisualsId
+      courseid
+      createdAt
+      descriptions {
+        course {
           abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
             }
             nextToken
           }
-          id
-          createdAt
-          updatedAt
-        }
-        level
-        abbr
-        videos {
-          items {
-            courseID
+          visuals {
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
-            }
-            day
-            title
-            shortdesc
-            longdesc
-            slug
-            section {
-              name
-              number
-              desc
-              id
+              courseVisualsId
+              courseid
               createdAt
+              id
+              level
+              testCoursesId
               updatedAt
-              courseDescriptionsSectionsId
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        longdesc
+        sections {
+          items {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
             }
             id
-            createdAt
+            name
+            number
             updatedAt
           }
           nextToken
         }
-        videocount
-        visuals {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          tnurl
-          themename
-          id
-          createdAt
-          updatedAt
-        }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
+        shortdesc
+        subtitle
+        title
         updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
-      }
-      day
-      title
-      shortdesc
-      longdesc
-      slug
-      section {
-        descripition {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        name
-        number
-        desc
-        id
-        createdAt
-        updatedAt
-        courseDescriptionsSectionsId
       }
       id
-      createdAt
+      level
+      test {
+        abbr
+        courses {
+          items {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          nextToken
+        }
+        createdAt
+        fullname
+        id
+        longdesc
+        shortdesc
+        shortname
+        updatedAt
+      }
+      testCoursesId
       updatedAt
+      videocount
+      videos {
+        items {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          courseID
+          createdAt
+          day
+          id
+          longdesc
+          section {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            name
+            number
+            updatedAt
+          }
+          shortdesc
+          slug
+          title
+          updatedAt
+        }
+        nextToken
+      }
+      visuals {
+        course {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        themename
+        tnurl
+        updatedAt
+      }
+    }
+  }
+`;
+export const deleteCourseDescriptions = /* GraphQL */ `
+  mutation DeleteCourseDescriptions(
+    $condition: ModelCourseDescriptionsConditionInput
+    $input: DeleteCourseDescriptionsInput!
+  ) {
+    deleteCourseDescriptions(condition: $condition, input: $input) {
+      course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
+        courseid
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            nextToken
+          }
+          shortdesc
+          subtitle
+          title
+          updatedAt
+        }
+        id
+        level
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
+        videos {
+          items {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            courseID
+            createdAt
+            day
+            id
+            longdesc
+            section {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            shortdesc
+            slug
+            title
+            updatedAt
+          }
+          nextToken
+        }
+        visuals {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          themename
+          tnurl
+          updatedAt
+        }
+      }
+      createdAt
+      id
+      longdesc
+      sections {
+        items {
+          courseDescriptionsSectionsId
+          createdAt
+          desc
+          descripition {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          name
+          number
+          updatedAt
+        }
+        nextToken
+      }
+      shortdesc
+      subtitle
+      title
+      updatedAt
+    }
+  }
+`;
+export const deleteCourseDescriptionsInfoBox = /* GraphQL */ `
+  mutation DeleteCourseDescriptionsInfoBox(
+    $condition: ModelCourseDescriptionsInfoBoxConditionInput
+    $input: DeleteCourseDescriptionsInfoBoxInput!
+  ) {
+    deleteCourseDescriptionsInfoBox(condition: $condition, input: $input) {
+      createdAt
+      id
+      items {
+        items {
+          courseDescriptionsInfoBoxItemsId
+          createdAt
+          icon
+          id
+          text
+          updatedAt
+        }
+        nextToken
+      }
+      name
+      updatedAt
+    }
+  }
+`;
+export const deleteCourseDescriptionsSection = /* GraphQL */ `
+  mutation DeleteCourseDescriptionsSection(
+    $condition: ModelCourseDescriptionsSectionConditionInput
+    $input: DeleteCourseDescriptionsSectionInput!
+  ) {
+    deleteCourseDescriptionsSection(condition: $condition, input: $input) {
+      courseDescriptionsSectionsId
+      createdAt
+      desc
+      descripition {
+        course {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        longdesc
+        sections {
+          items {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            name
+            number
+            updatedAt
+          }
+          nextToken
+        }
+        shortdesc
+        subtitle
+        title
+        updatedAt
+      }
+      id
+      name
+      number
+      updatedAt
+    }
+  }
+`;
+export const deleteCourseVisuals = /* GraphQL */ `
+  mutation DeleteCourseVisuals(
+    $condition: ModelCourseVisualsConditionInput
+    $input: DeleteCourseVisualsInput!
+  ) {
+    deleteCourseVisuals(condition: $condition, input: $input) {
+      course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
+        courseid
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            nextToken
+          }
+          shortdesc
+          subtitle
+          title
+          updatedAt
+        }
+        id
+        level
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
+        videos {
+          items {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            courseID
+            createdAt
+            day
+            id
+            longdesc
+            section {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            shortdesc
+            slug
+            title
+            updatedAt
+          }
+          nextToken
+        }
+        visuals {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          themename
+          tnurl
+          updatedAt
+        }
+      }
+      createdAt
+      id
+      themename
+      tnurl
+      updatedAt
+    }
+  }
+`;
+export const deleteInfoBoxItem = /* GraphQL */ `
+  mutation DeleteInfoBoxItem(
+    $condition: ModelInfoBoxItemConditionInput
+    $input: DeleteInfoBoxItemInput!
+  ) {
+    deleteInfoBoxItem(condition: $condition, input: $input) {
+      courseDescriptionsInfoBoxItemsId
+      createdAt
+      icon
+      id
+      text
+      updatedAt
+    }
+  }
+`;
+export const deleteSchool = /* GraphQL */ `
+  mutation DeleteSchool(
+    $condition: ModelSchoolConditionInput
+    $input: DeleteSchoolInput!
+  ) {
+    deleteSchool(condition: $condition, input: $input) {
+      accounts {
+        items {
+          createdAt
+          id
+          number
+          permissions
+          schoolAccountsId
+          updatedAt
+          usercount
+          users {
+            items {
+              accountUsersId
+              createdAt
+              id
+              number
+              password
+              updatedAt
+              username
+            }
+            nextToken
+          }
+        }
+        nextToken
+      }
+      createdAt
+      id
+      name
+      number
+      updatedAt
+    }
+  }
+`;
+export const deleteTest = /* GraphQL */ `
+  mutation DeleteTest(
+    $condition: ModelTestConditionInput
+    $input: DeleteTestInput!
+  ) {
+    deleteTest(condition: $condition, input: $input) {
+      abbr
+      courses {
+        items {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        nextToken
+      }
+      createdAt
+      fullname
+      id
+      longdesc
+      shortdesc
+      shortname
+      updatedAt
+    }
+  }
+`;
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser(
+    $condition: ModelUserConditionInput
+    $input: DeleteUserInput!
+  ) {
+    deleteUser(condition: $condition, input: $input) {
+      accountUsersId
+      createdAt
+      id
+      number
+      password
+      updatedAt
+      username
     }
   }
 `;
 export const deleteVideo = /* GraphQL */ `
   mutation DeleteVideo(
-    $input: DeleteVideoInput!
     $condition: ModelVideoConditionInput
+    $input: DeleteVideoInput!
   ) {
-    deleteVideo(input: $input, condition: $condition) {
-      courseID
+    deleteVideo(condition: $condition, input: $input) {
       course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
         courseid
-        test {
-          fullname
-          shortname
-          abbr
-          shortdesc
-          longdesc
-          courses {
-            items {
-              courseid
-              level
-              abbr
-              videocount
-              id
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
-              testCoursesId
-              courseVisualsId
-              courseDescriptionsId
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
             }
             nextToken
           }
-          id
-          createdAt
+          shortdesc
+          subtitle
+          title
           updatedAt
         }
+        id
         level
-        abbr
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
         videos {
           items {
-            courseID
             course {
-              courseid
-              level
               abbr
-              videocount
-              id
-              createdAt
-              updatedAt
-              testCoursesId
-              courseVisualsId
               courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
             }
+            courseID
+            createdAt
             day
-            title
-            shortdesc
+            id
             longdesc
-            slug
             section {
-              name
-              number
+              courseDescriptionsSectionsId
+              createdAt
               desc
               id
-              createdAt
+              name
+              number
               updatedAt
-              courseDescriptionsSectionsId
             }
-            id
-            createdAt
+            shortdesc
+            slug
+            title
             updatedAt
           }
           nextToken
         }
-        videocount
         visuals {
           course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
             abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
             descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
-            updatedAt
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
             testCoursesId
-            courseVisualsId
-            courseDescriptionsId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
           }
-          tnurl
+          createdAt
+          id
           themename
-          id
-          createdAt
+          tnurl
           updatedAt
         }
-        descriptions {
-          course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
-            abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
-            descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            id
-            createdAt
-            updatedAt
-            testCoursesId
-            courseVisualsId
-            courseDescriptionsId
-          }
-          title
-          subtitle
-          shortdesc
-          longdesc
-          sections {
-            items {
-              name
-              number
-              desc
-              id
-              createdAt
-              updatedAt
-              courseDescriptionsSectionsId
-            }
-            nextToken
-          }
-          id
-          createdAt
-          updatedAt
-        }
-        id
-        createdAt
-        updatedAt
-        testCoursesId
-        courseVisualsId
-        courseDescriptionsId
       }
+      courseID
+      createdAt
       day
-      title
-      shortdesc
+      id
       longdesc
-      slug
       section {
+        courseDescriptionsSectionsId
+        createdAt
+        desc
         descripition {
           course {
-            courseid
-            test {
-              fullname
-              shortname
-              abbr
-              shortdesc
-              longdesc
-              id
-              createdAt
-              updatedAt
-            }
-            level
             abbr
-            videos {
-              nextToken
-            }
-            videocount
-            visuals {
-              tnurl
-              themename
-              id
-              createdAt
-              updatedAt
-            }
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
             descriptions {
-              title
-              subtitle
-              shortdesc
-              longdesc
-              id
               createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
               updatedAt
             }
             id
-            createdAt
-            updatedAt
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
             testCoursesId
-            courseVisualsId
-            courseDescriptionsId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
           }
-          title
-          subtitle
-          shortdesc
+          createdAt
+          id
           longdesc
           sections {
             items {
-              name
-              number
+              courseDescriptionsSectionsId
+              createdAt
               desc
               id
-              createdAt
+              name
+              number
               updatedAt
-              courseDescriptionsSectionsId
             }
             nextToken
           }
-          id
-          createdAt
+          shortdesc
+          subtitle
+          title
           updatedAt
         }
+        id
         name
         number
-        desc
-        id
-        createdAt
         updatedAt
-        courseDescriptionsSectionsId
+      }
+      shortdesc
+      slug
+      title
+      updatedAt
+    }
+  }
+`;
+export const updateAccount = /* GraphQL */ `
+  mutation UpdateAccount(
+    $condition: ModelAccountConditionInput
+    $input: UpdateAccountInput!
+  ) {
+    updateAccount(condition: $condition, input: $input) {
+      createdAt
+      id
+      number
+      permissions
+      schoolAccountsId
+      updatedAt
+      usercount
+      users {
+        items {
+          accountUsersId
+          createdAt
+          id
+          number
+          password
+          updatedAt
+          username
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const updateCourse = /* GraphQL */ `
+  mutation UpdateCourse(
+    $condition: ModelCourseConditionInput
+    $input: UpdateCourseInput!
+  ) {
+    updateCourse(condition: $condition, input: $input) {
+      abbr
+      courseDescriptionsId
+      courseVisualsId
+      courseid
+      createdAt
+      descriptions {
+        course {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        longdesc
+        sections {
+          items {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            name
+            number
+            updatedAt
+          }
+          nextToken
+        }
+        shortdesc
+        subtitle
+        title
+        updatedAt
       }
       id
+      level
+      test {
+        abbr
+        courses {
+          items {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          nextToken
+        }
+        createdAt
+        fullname
+        id
+        longdesc
+        shortdesc
+        shortname
+        updatedAt
+      }
+      testCoursesId
+      updatedAt
+      videocount
+      videos {
+        items {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          courseID
+          createdAt
+          day
+          id
+          longdesc
+          section {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            name
+            number
+            updatedAt
+          }
+          shortdesc
+          slug
+          title
+          updatedAt
+        }
+        nextToken
+      }
+      visuals {
+        course {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        themename
+        tnurl
+        updatedAt
+      }
+    }
+  }
+`;
+export const updateCourseDescriptions = /* GraphQL */ `
+  mutation UpdateCourseDescriptions(
+    $condition: ModelCourseDescriptionsConditionInput
+    $input: UpdateCourseDescriptionsInput!
+  ) {
+    updateCourseDescriptions(condition: $condition, input: $input) {
+      course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
+        courseid
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            nextToken
+          }
+          shortdesc
+          subtitle
+          title
+          updatedAt
+        }
+        id
+        level
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
+        videos {
+          items {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            courseID
+            createdAt
+            day
+            id
+            longdesc
+            section {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            shortdesc
+            slug
+            title
+            updatedAt
+          }
+          nextToken
+        }
+        visuals {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          themename
+          tnurl
+          updatedAt
+        }
+      }
       createdAt
+      id
+      longdesc
+      sections {
+        items {
+          courseDescriptionsSectionsId
+          createdAt
+          desc
+          descripition {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          name
+          number
+          updatedAt
+        }
+        nextToken
+      }
+      shortdesc
+      subtitle
+      title
+      updatedAt
+    }
+  }
+`;
+export const updateCourseDescriptionsInfoBox = /* GraphQL */ `
+  mutation UpdateCourseDescriptionsInfoBox(
+    $condition: ModelCourseDescriptionsInfoBoxConditionInput
+    $input: UpdateCourseDescriptionsInfoBoxInput!
+  ) {
+    updateCourseDescriptionsInfoBox(condition: $condition, input: $input) {
+      createdAt
+      id
+      items {
+        items {
+          courseDescriptionsInfoBoxItemsId
+          createdAt
+          icon
+          id
+          text
+          updatedAt
+        }
+        nextToken
+      }
+      name
+      updatedAt
+    }
+  }
+`;
+export const updateCourseDescriptionsSection = /* GraphQL */ `
+  mutation UpdateCourseDescriptionsSection(
+    $condition: ModelCourseDescriptionsSectionConditionInput
+    $input: UpdateCourseDescriptionsSectionInput!
+  ) {
+    updateCourseDescriptionsSection(condition: $condition, input: $input) {
+      courseDescriptionsSectionsId
+      createdAt
+      desc
+      descripition {
+        course {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        createdAt
+        id
+        longdesc
+        sections {
+          items {
+            courseDescriptionsSectionsId
+            createdAt
+            desc
+            descripition {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            name
+            number
+            updatedAt
+          }
+          nextToken
+        }
+        shortdesc
+        subtitle
+        title
+        updatedAt
+      }
+      id
+      name
+      number
+      updatedAt
+    }
+  }
+`;
+export const updateCourseVisuals = /* GraphQL */ `
+  mutation UpdateCourseVisuals(
+    $condition: ModelCourseVisualsConditionInput
+    $input: UpdateCourseVisualsInput!
+  ) {
+    updateCourseVisuals(condition: $condition, input: $input) {
+      course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
+        courseid
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            nextToken
+          }
+          shortdesc
+          subtitle
+          title
+          updatedAt
+        }
+        id
+        level
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
+        videos {
+          items {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            courseID
+            createdAt
+            day
+            id
+            longdesc
+            section {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            shortdesc
+            slug
+            title
+            updatedAt
+          }
+          nextToken
+        }
+        visuals {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          themename
+          tnurl
+          updatedAt
+        }
+      }
+      createdAt
+      id
+      themename
+      tnurl
+      updatedAt
+    }
+  }
+`;
+export const updateInfoBoxItem = /* GraphQL */ `
+  mutation UpdateInfoBoxItem(
+    $condition: ModelInfoBoxItemConditionInput
+    $input: UpdateInfoBoxItemInput!
+  ) {
+    updateInfoBoxItem(condition: $condition, input: $input) {
+      courseDescriptionsInfoBoxItemsId
+      createdAt
+      icon
+      id
+      text
+      updatedAt
+    }
+  }
+`;
+export const updateSchool = /* GraphQL */ `
+  mutation UpdateSchool(
+    $condition: ModelSchoolConditionInput
+    $input: UpdateSchoolInput!
+  ) {
+    updateSchool(condition: $condition, input: $input) {
+      accounts {
+        items {
+          createdAt
+          id
+          number
+          permissions
+          schoolAccountsId
+          updatedAt
+          usercount
+          users {
+            items {
+              accountUsersId
+              createdAt
+              id
+              number
+              password
+              updatedAt
+              username
+            }
+            nextToken
+          }
+        }
+        nextToken
+      }
+      createdAt
+      id
+      name
+      number
+      updatedAt
+    }
+  }
+`;
+export const updateTest = /* GraphQL */ `
+  mutation UpdateTest(
+    $condition: ModelTestConditionInput
+    $input: UpdateTestInput!
+  ) {
+    updateTest(condition: $condition, input: $input) {
+      abbr
+      courses {
+        items {
+          abbr
+          courseDescriptionsId
+          courseVisualsId
+          courseid
+          createdAt
+          descriptions {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            longdesc
+            sections {
+              nextToken
+            }
+            shortdesc
+            subtitle
+            title
+            updatedAt
+          }
+          id
+          level
+          test {
+            abbr
+            courses {
+              nextToken
+            }
+            createdAt
+            fullname
+            id
+            longdesc
+            shortdesc
+            shortname
+            updatedAt
+          }
+          testCoursesId
+          updatedAt
+          videocount
+          videos {
+            items {
+              courseID
+              createdAt
+              day
+              id
+              longdesc
+              shortdesc
+              slug
+              title
+              updatedAt
+            }
+            nextToken
+          }
+          visuals {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            createdAt
+            id
+            themename
+            tnurl
+            updatedAt
+          }
+        }
+        nextToken
+      }
+      createdAt
+      fullname
+      id
+      longdesc
+      shortdesc
+      shortname
+      updatedAt
+    }
+  }
+`;
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser(
+    $condition: ModelUserConditionInput
+    $input: UpdateUserInput!
+  ) {
+    updateUser(condition: $condition, input: $input) {
+      accountUsersId
+      createdAt
+      id
+      number
+      password
+      updatedAt
+      username
+    }
+  }
+`;
+export const updateVideo = /* GraphQL */ `
+  mutation UpdateVideo(
+    $condition: ModelVideoConditionInput
+    $input: UpdateVideoInput!
+  ) {
+    updateVideo(condition: $condition, input: $input) {
+      course {
+        abbr
+        courseDescriptionsId
+        courseVisualsId
+        courseid
+        createdAt
+        descriptions {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            nextToken
+          }
+          shortdesc
+          subtitle
+          title
+          updatedAt
+        }
+        id
+        level
+        test {
+          abbr
+          courses {
+            items {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            nextToken
+          }
+          createdAt
+          fullname
+          id
+          longdesc
+          shortdesc
+          shortname
+          updatedAt
+        }
+        testCoursesId
+        updatedAt
+        videocount
+        videos {
+          items {
+            course {
+              abbr
+              courseDescriptionsId
+              courseVisualsId
+              courseid
+              createdAt
+              id
+              level
+              testCoursesId
+              updatedAt
+              videocount
+            }
+            courseID
+            createdAt
+            day
+            id
+            longdesc
+            section {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            shortdesc
+            slug
+            title
+            updatedAt
+          }
+          nextToken
+        }
+        visuals {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          themename
+          tnurl
+          updatedAt
+        }
+      }
+      courseID
+      createdAt
+      day
+      id
+      longdesc
+      section {
+        courseDescriptionsSectionsId
+        createdAt
+        desc
+        descripition {
+          course {
+            abbr
+            courseDescriptionsId
+            courseVisualsId
+            courseid
+            createdAt
+            descriptions {
+              createdAt
+              id
+              longdesc
+              shortdesc
+              subtitle
+              title
+              updatedAt
+            }
+            id
+            level
+            test {
+              abbr
+              createdAt
+              fullname
+              id
+              longdesc
+              shortdesc
+              shortname
+              updatedAt
+            }
+            testCoursesId
+            updatedAt
+            videocount
+            videos {
+              nextToken
+            }
+            visuals {
+              createdAt
+              id
+              themename
+              tnurl
+              updatedAt
+            }
+          }
+          createdAt
+          id
+          longdesc
+          sections {
+            items {
+              courseDescriptionsSectionsId
+              createdAt
+              desc
+              id
+              name
+              number
+              updatedAt
+            }
+            nextToken
+          }
+          shortdesc
+          subtitle
+          title
+          updatedAt
+        }
+        id
+        name
+        number
+        updatedAt
+      }
+      shortdesc
+      slug
+      title
       updatedAt
     }
   }
