@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "aelproduction",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Justin\\Desktop\\aelproduction\\amplify\\backend\\api\\aelproduction\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-04-05T07:53:52.525Z",
+      "keyDescription": ""
+    }
+  }
+}

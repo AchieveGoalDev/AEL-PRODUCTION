@@ -1,0 +1,104 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+
+#School Data Types
+type School@model{
+    number: Int! #4-digit number
+    name: String!
+    accounts:[Account!] @hasMany
+}
+
+type Account@model{
+    number: Int! #2-digit number
+    permissions: [String!] #Find a way to connect to courses with abbr
+    usercount: Int!
+    users: [User!] @hasMany
+}
+
+#User Data Types
+
+type User@model{
+    number: Int! #4-digit number
+    username: String!
+    password: String!
+}
+
+#Test Data Type
+type Test@model{
+    fullname: String! #実用英語技能検定 
+    shortname: String! #英検
+    abbr: String! #EK
+    shortdesc: String
+    longdesc: [String!]
+    courses: [Course!]! @hasMany
+}
+
+#Course Data Types - Relationship definitions still unclear. Research & Tests necessary 
+type Course @model{
+    courseid: ID!
+    test: Test @belongsTo
+    level: String! #ex: 英検2級
+    abbr: String! #ex: EK2
+    videos: [Video!] @hasMany(indexName: "byCourse", fields:["courseid"])
+    videocount: Int
+    visuals: CourseVisuals @hasOne
+    descriptions: CourseDescriptions @hasOne
+}
+
+type CourseVisuals @model{
+    course: Course!
+    tnurl: String  #thumbnail url slug
+    themename: String
+}
+
+type CourseDescriptions @model{
+    course: Course!
+    title: String! #英検®3級絶対合格講座
+    subtitle: String! #予習必須！全問題形式に対応したコースで、絶対合格！
+    shortdesc: String! #英検®3級は、英作文と二次面接試験が加わることで、最初の登竜門となります。全ての問題形式を、丁寧に解剖・解説します！
+    longdesc: [String!]!
+    sections: [CourseDescriptionsSection!]! @hasMany
+}
+
+type CourseDescriptionsSection@model{
+    descripition: CourseDescriptions!
+    name: String!
+    number: Int!
+    desc: String
+}
+
+type CourseDescriptionsInfoBox @model{
+    name: String!
+    items: [InfoBoxItem!]! @hasMany
+}
+
+type InfoBoxItem @model{
+    icon: String! @hasOne
+    text: String!
+}
+
+#Video Data Types
+
+type Video @model {
+    courseID: ID! @index(name: "byCourse", sortKeyFields:["day"]) 
+    course: Course!
+    day: Int
+    title: String!
+    shortdesc: String
+    longdesc: [String!]
+    slug: String!
+    section: CourseDescriptionsSection!
+}
+
+
+# #Other
+# enum Icon { #For components requiring icons
+#     CHECK
+#     WARNING
+#     ERROR
+# }
+
+
+
